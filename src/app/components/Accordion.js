@@ -64,7 +64,7 @@ const Accordion = () => {
                   } text-black-5 rounded-xl leading-130 text-20px lg:text-22px tracking-tighter`}
                 >
                   <button
-                    className={`w-full flex text-black hover:text-purple-300`}
+                    className={`w-full flex text-black`}
                     type="button"
                     aria-expanded={activeIndex === index ? "true" : "false"}
                     aria-controls={`accordion1sect${index}`}

@@ -28,10 +28,10 @@ const Section3 = () => {
             />
           </div>
           <h2 className="card-title text-2xl text-black-2 font-bold mb-2">
-            Mind's Up Socioemocional
+            Mind&apos;s Up Socioemocional
           </h2>
           <p className="card-description text-black-3">
-          Ferramenta de mensuração das habilidades socioemocionais.
+            Ferramenta de mensuração das habilidades socioemocionais.
           </p>
           <div className="flex items-center justify-center">
             <Link
@@ -60,10 +60,10 @@ const Section3 = () => {
             />
           </div>
           <h2 className="card-title text-2xl text-black-2  font-bold mb-3">
-            Mind's Up Simulados
+            Mind&apos;s Up Simulados
           </h2>
           <p className="card-description text-black-3 mb-4">
-          Simulados do ENEM corrigidos com TRI.
+            Simulados do ENEM corrigidos com TRI.
           </p>
           <div className="flex items-center justify-center">
             <Link
@@ -92,10 +92,11 @@ const Section3 = () => {
             />
           </div>
           <h2 className="card-title text-2xl text-black-2  font-bold mb-3">
-            Mind's Up Insights
+            Mind&apos;s Up Insights
           </h2>
           <p className="card-description text-black-3 mb-4">
-          Relatórios gerados pela equipe de dados prontos para potencializar as ações da sua escola.
+            Relatórios gerados pela equipe de dados prontos para potencializar
+            as ações da sua escola.
           </p>
           <div className="flex items-center justify-center">
             <Link

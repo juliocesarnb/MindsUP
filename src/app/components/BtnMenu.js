@@ -1,71 +1,108 @@
-'use client'
-import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-const BtnMenu = () => {
-  
-  
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 
-  const [mostrarMenu, setMostrarMenu] = React.useState(false);
+const BtnMenu = () => {
+  const [mostrarMenu, setMostrarMenu] = useState(false);
 
   const toggleMenu = () => {
     setMostrarMenu(!mostrarMenu);
   };
 
   return (
-    <div className="lg:hidden mr-10 ">
-      <div onClick={toggleMenu}>
+    <div className="lg:hidden">
+      <div onClick={toggleMenu} className="cursor-pointer p-4">
         {mostrarMenu ? (
-          <div className="cursor-pointer ">
-            <div className="w-6 ml-10 -10 h-px transform rotate-45 bg-black"></div>
-            <div className="w-6 h-px ml-10 transform -rotate-45 bg-black"></div>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-7 h-7"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+              clipRule="evenodd"
+            />
+          </svg>
         ) : (
-          <div className=" cursor-pointer">
-            <div className="w-6 h-px bg-black my-1"></div>
-            <div className="w-6 h-px bg-black my-1"></div>
-            <div className="w-6 h-px bg-black my-1"></div>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-7 h-7"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clipRule="evenodd"
+            />
+          </svg>
         )}
       </div>
 
       {mostrarMenu && (
-        <div className="absolute container h-screen backdrop-blur-xl z-20 top-24 overflow-hidden start-2">
-          <ul className="flex p-10 justify-center gap-3 items-center">
-            <li class="text-2xl hover:text-purple-2">
-              <Link href="/">Quem Somos</Link>
-            </li>
-            <li class="text-2xl cursor-pointer hover:text-purple-2">
+        <div className="fixed inset-0 backdrop-blur-xl z-20">
+          <div className="flex justify-end p-4">
+            <div onClick={toggleMenu} className="cursor-pointer mt-4 ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-7 h-7"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <ul className="flex flex-col items-center m-[-20px]  justify-center h-full gap-3">
+            <li className="text-2xl cursor-pointer hover:text-purple-2">
               <Link
-                activeClass="active"
+                to="quem-somos"
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={500}
+                onClick={toggleMenu}
+              >
+                Quem Somos
+              </Link>
+            </li>
+            <li className="text-2xl cursor-pointer hover:text-purple-2">
+              <Link
                 to="solucoes"
                 spy={true}
                 smooth={true}
                 offset={-60}
                 duration={500}
+                onClick={toggleMenu}
               >
                 Soluções
               </Link>
             </li>
-            <li class="text-2xl cursor-pointer hover:text-purple-2">
+            <li className="text-2xl cursor-pointer hover:text-purple-2">
               <Link
-                activeClass="active"
                 to="produtos"
                 spy={true}
                 smooth={true}
                 offset={-10}
                 duration={500}
+                onClick={toggleMenu}
               >
                 Produtos
               </Link>
             </li>
-            <li class="text-2xl cursor-pointer hover:text-purple-2">
+            <li className="text-2xl cursor-pointer hover:text-purple-2">
               <Link
-                activeClass="active"
                 to="contatos"
                 spy={true}
                 smooth={true}
                 offset={10}
                 duration={500}
+                onClick={toggleMenu}
               >
                 Contatos
               </Link>

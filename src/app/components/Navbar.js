@@ -3,23 +3,21 @@ import Link from 'next/link';
 import BtnMenu from './BtnMenu';
 import Image from 'next/image';
 
-
 const Navbar = () => {
   return (
-    <>
-    <nav className="text-black-1 py-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="fixed top-0 w-full bg-white shadow-lg z-50 text-black-1 py-4">
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-20">
         <div className="ml-20">
           <Link href="/" >
             <Image
-                src="/assets/Logo-MUp.svg"
-                alt="Logo da empresa"
-                width={200}
-                height={200}
+              src="/assets/Logo-MUp.svg"
+              alt="Logo da empresa"
+              width={200}
+              height={200}
             />
           </Link>
         </div>
-        <ul className="">
+        <ul className="flex items-center">
           <div className="hidden lg:flex flex items-center space-x-10">
             <li className="hover:text-purple-2">
               <Link href="#">Quem Somos</Link>
@@ -38,7 +36,6 @@ const Navbar = () => {
         </ul>
       </div>
     </nav>
-    </>
   );
 };
 

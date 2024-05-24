@@ -4,43 +4,46 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer id="contatos" className="bg-purple-2 px-10 min-h-screen">
-      {/* logo */}
-      <div className="flex p-10">
-      <Link href="/" >
-            <Image
-                src="/assets/Logo-MUp-Rodape.svg"
-                alt="Logo da empresa"
-                width={200}
-                height={200}
-            />
-          </Link>
+    <footer id="contatos" className="bg-purple-2 px-10 py-10 min-h-screen">
+      {/* Logo */}
+      <div className="flex justify-center md:justify-start p-10">
+        <Link href="/">
+          <Image
+            src="/assets/Logo-MUp-Rodape.svg"
+            alt="Logo da empresa"
+            width={200}
+            height={200}
+          />
+        </Link>
       </div>
-      
-      <div className="flex flex-col md:flex-row items-center justify-around">
-        <div className="md:pb-[20rem] pb-5 text-center md:text-left">
+
+      {/* ---| container |----*/}
+      <div className="flex flex-col md:flex-row items-center justify-around flex-wrap">
+
+        {/* ---| bloco de texto |--- */}
+        <div className="md:pb-20 pb-5 text-center ">
           <h3 className="text-3xl text-white mb-4">Quer saber mais?</h3>
           <p className="text-gray-1">
             Ajude-nos a conhecer sua escola e entender como podemos construir um caso de sucesso!
           </p>
+          <p className="text-gray-1">Preencha o formulário abaixo e fale conosco.</p>
         </div>
 
-        {/* container do forms */}
+        {/* Container do formulário */}
         <div className="w-full md:w-1/2 p-4 rounded-md text-black bg-white mb-10 md:mb-0">
           <div className="text-2xl font-bold mb-2 text-[#1e0e4b] text-center">
             Entre em <span className="text-[#7747ff]">contato</span>
           </div>
 
-          {/* forms para contato */}
-
+          {/* Formulário para contato */}
           <form
             target="_blank"
             action="https://formsubmit.co/juliocesarnb99@gmail.com"
             method="POST"
             className="flex flex-col gap-3"
           >
-            <input type="hidden" name="_next" value="http://localhost:3000/"/>
-            
+            <input type="hidden" name="_next" value="http://localhost:3000/" />
+
             <div className="block relative">
               <label
                 htmlFor="email"
@@ -52,7 +55,7 @@ const Footer = () => {
                 type="text"
                 name="email"
                 id="email"
-                className="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2  ring-gray-900 outline-0"
+                className="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
               />
             </div>
             <div className="block relative">
@@ -70,7 +73,7 @@ const Footer = () => {
               />
             </div>
 
-            {/* telefone */}
+            {/* Telefone */}
             <div className="block relative">
               <label
                 htmlFor="telefone"
@@ -85,6 +88,7 @@ const Footer = () => {
                 className="rounded border border-gray-200 text-sm w-full font-normal leading-[18px] text-black tracking-[0px] appearance-none block h-11 m-0 p-[11px] focus:ring-2 ring-offset-2 ring-gray-900 outline-0"
               />
             </div>
+
             {/* Nome da escola */}
             <div className="block relative">
               <label
@@ -121,8 +125,9 @@ const Footer = () => {
                   Secretária de Educação
                 </option>
               </select>
-              {/* ícone seta para baixo*/}
-              <div className="absolute right-3 top-12 transform -translate-y-1/2">
+
+              {/* Ícone seta para baixo */}
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -150,17 +155,28 @@ const Footer = () => {
         </div>
 
         {/* Informações e contatos */}
-
-        <div className="m-16 flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start mb-10 md:mb-0">
           <div className="mb-2 text-white text-xl">Informações</div>
-          <Link href="/"><div className="mb-2 text-gray-1 cursor-pointer hover:text-white">Quem somos</div></Link>
-          <Link href="/"><div className="mb-2 text-gray-1 cursor-pointer hover:text-white">Soluções</div></Link>
-          <Link href="/"><div className="text-gray-1 cursor-pointer hover:text-white">Produtos</div></Link>
+          <Link href="/">
+            <div className="mb-2 text-gray-1 cursor-pointer hover:text-white">
+              Quem somos
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="mb-2 text-gray-1 cursor-pointer hover:text-white">
+              Soluções
+            </div>
+          </Link>
+          <Link href="/">
+            <div className="text-gray-1 cursor-pointer hover:text-white">
+              Produtos
+            </div>
+          </Link>
         </div>
 
-        {/* container do email e telefone */}
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-16">
-          {/* phone icon */}
+        {/* Container do email e telefone */}
+        <div className="flex flex-col items-center mt-8 gap-8 md:flex-row md:gap-16">
+          {/* Ícone telefone */}
           <div className="flex flex-col items-center text-white gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -177,10 +193,10 @@ const Footer = () => {
               />
             </svg>
             <span>Telefone</span>
-            <span className="w-[9rem]">+55859999-9999</span>
+            <span className="w-[9rem] text-center md:text-left">+55859999-9999</span>
           </div>
 
-          {/* email icon */}
+          {/* Ícone email */}
           <div className="flex flex-col items-center text-white gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +213,7 @@ const Footer = () => {
               />
             </svg>
             <span>Email</span>
-            <span>MindsUp@gmail.com</span>
+            <span className="w-[9rem] text-center md:text-left">MindsUp@gmail.com</span>
           </div>
         </div>
       </div>

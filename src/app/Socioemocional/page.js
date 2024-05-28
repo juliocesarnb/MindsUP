@@ -8,7 +8,7 @@ const Produtos = () => {
   return (
     <Background>
       <Navbar />
-      <section className="h-auto lg:h-screen bg-purple-1 rounded-2xl m-4 sm:m-8 lg:m-12">
+      <section className="h-auto lg:h-screen bg-purple-1 rounded-2xl m-4 sm:m-22 lg:m-12">
         <div className="flex flex-col gap-8 justify-center items-center container pt-16 sm:pt-24 lg:pt-32 p-4 sm:p-8 md:p-10 lg:p-12">
           
           <h1 className="text-blue-dark text-center pt-4 sm:pt-6 lg:pt-9 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">

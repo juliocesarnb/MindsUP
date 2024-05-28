@@ -13,12 +13,17 @@ const Home = () => {
     loop: {},
   });
   return (
-    <main className="mt-22">
+    <main className="pt-[4rem]">
       <Background>
+        
         {" "}
+        
         {/*Background padrão */}
+        
         <Navbar /> {/* Menu superior */}
+        
         {/* Seção - 1: Primeira Seção  */}
+        
         <div class="w-96 h-96 rounded-full bg-gradient-to-br from-blue-200 to-purple-100 filter blur-3xl  absolute z-0 lg:ml-40 mt-4 "></div>
         <div class="w-96 h-96 rounded-full bg-gradient-to-br from-purple-200 to-blue-100 filter blur-3xl  absolute z-0 ml-2 mt-44"></div>
         <div class="w-96 h-96 rounded-full bg-gradient-to-br from-purple-100 to-orange-100 filter blur-3xl absolute z-0 lg:ml-96 mt-28"></div>

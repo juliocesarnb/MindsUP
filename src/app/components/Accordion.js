@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import Image from "next/image";
 
 const Accordion = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -105,7 +106,7 @@ const Accordion = () => {
                 >
                   <div className="pl-9 text-black-5">{item.description}</div>
                   <div className="pt-2 lg:hidden">
-                    <img
+                    <Image
                       src={item.imageUrl}
                       alt={`Item ${index + 1}`}
                       className="w-full rounded-2xl"
@@ -126,7 +127,7 @@ const Accordion = () => {
                     key={index}
                     className={activeIndex === index ? "" : "hidden"}
                   >
-                    <img
+                    <Image
                       src={item.imageUrl}
                       alt={`Item ${index + 1}`}
                       className="object-cover "
